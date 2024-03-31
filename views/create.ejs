@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./components/head.ejs") %>
+
+  <body>
+    <%- include("./components/navbar.ejs") %>
+    <div class="container">
+      <div class="row vh-100 align-items-center">
+        <div class="col-12 col-lg-4 border rounded-2 mx-auto">
+          <form action="/create" method="POST">
+            <div class="fs-4 text-center mb-3">Create Your Blog</div>
+            <div class="mb-3">
+              <label class="form-label">Blog Title</label>
+              <input
+                type="text"
+                class="form-control"
+                name="title"
+                placeholder="Your Blog Title"
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Blog Body</label>
+              <textarea
+                class="form-control"
+                placeholder="Your Blog Body"
+                cols="30"
+                rows="10"
+                name="body"
+              ></textarea>
+            </div>
+            <div class="mb-3">
+              <button type="submit" class="btn btn-danger text-uppercase w-100">
+                post
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.js"></script>
+  </body>
+</html>

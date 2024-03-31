@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./components/head.ejs") %>
+
+  <body>
+    <%- include("./components/navbar.ejs") %>
+    <div class="container">
+      <div class="row">
+        <% if (blogs.length >0) {%> <% blogs.forEach(blog => {%>
+        <div class="col-12 col-lg-6 p-3">
+          <div class="card">
+            <div class="card-body">
+              <h3><%= blog.title %></h3>
+              <p><%= blog.body %></p>
+            </div>
+          </div>
+        </div>
+        <%}) %> <%} else{%>
+        <h3 class="text-muted">No Blogs Here</h3>
+        <%} %>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.js"></script>
+  </body>
+</html>
